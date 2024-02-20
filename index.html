@@ -7,6 +7,14 @@
     <title>Animaciones</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,12 +33,12 @@
 
         <aside class="aside">
             <ul class="">
-                <li class="link-menu">Home</li>
-                <li class="link-menu">Sobre Nosotros</li>
-                <li class="link-menu">Contacto</li>
+                <li class="link-menu"> <a href="#">Home</a></li>
+                <li class="link-menu"> <a href="#about"> Sobre Nosotros</a></li>
+                <li class="link-menu"> <a href="#contacto">Contacto</a></li>
             </ul>
- 
-       </aside>
+
+        </aside>
 
         <section class="container-card">
             <section class="main-card">
@@ -65,11 +73,42 @@
         </section>
 
 
+        <section class="about" id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa dedica a generar experiencia de usuarios desde la investigación al desarrollo del sitio
+            </p>
+        </section>
+
+
+        <section class="contacto" id="contacto">
+
+            <form action="" class="form">
+                <h2>Contacto</h2>
+
+                <label for="">Nombre</label>
+                <input type="text" value="Nombre">
+
+                <label for="">Apellido</label>
+                <input type="text" value="Apellido">
+
+                <label for="">Mail</label>
+                <input type="mail" value="Mail">
+
+                <input type="button" value="Enviar">
+
+            </form>
+
+        </section>
+
         <footer class="footer">
-            <p>Todos los derechos reservados - 2024</p>
-            <div>
-                <img class="icon-social" src="./assets/img/instagram.png" alt="logo instagram">
-                <img class="icon-social" src="./assets/img/facebook.png" alt="logo facebook">
+            <p class="footer-paragraph">Todos los derechos reservados - 2024 &copy;</p>
+            <div class="footer-icon">
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img class="icon-social" src="./assets/img/instagram.png" alt="logo instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/">
+                    <img class="icon-social" src="./assets/img/facebook.png" alt="logo facebook">
+                </a>
 
             </div>
         </footer>

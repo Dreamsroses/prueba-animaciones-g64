@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 .logo-gub {
@@ -25,6 +26,12 @@
     padding: 10px;
     font-size: 1rem;
     list-style: none;
+    width: 100vw;
+}
+
+.link-menu a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
 }
 
 .title-gallery {
@@ -32,7 +39,7 @@
     font-size: 1.5rem;
 }
 
-.aside{
+.aside {
     margin-top: 40px;
 }
 
@@ -52,6 +59,58 @@
     padding: 30px 0;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.about {
+    margin: 40px;
+}
+
+.about p {
+    padding: 20px 0;
+    line-height: 30px;
+}
+
+label,
+input {
+    /* display: block; */
+    padding: 5px 0;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    width: 100%;
+    color: gray;
+    font-size: 1.1rem;
+}
+
+input:last-child {
+    background-color: rgb(52, 52, 52);
+    color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input:last-child:hover {
+    background-color: rgb(140, 101, 101);
+    color: azure;
+}
+
+.form h2 {
+    padding: 20px 0;
+}
+
+.contacto {
+    margin: 0 40px 60px 40px;
+}
+
 .footer {
     background-color: rgb(38, 38, 38);
     color: azure;
@@ -60,6 +119,15 @@
     align-items: center;
     flex-direction: column;
     padding: 30px;
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-paragraph{
+    text-align: center;
 }
 
 .icon-social {
@@ -130,6 +198,10 @@
 
 @media only screen and (min-width: 600px) {
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     main {
         display: grid;
         grid-template-columns: repeat(5, auto);
@@ -139,12 +211,21 @@
             "nav nav nav nav nav"
             "container container container container aside"
             "container container container container aside"
+            "about about about about aside"
+            "contacto contacto contacto contacto aside"
             "footer footer footer footer footer"
     }
 
     .aside {
         grid-area: aside;
         width: 100%;
+        display: grid;
+        grid-column: 5 / 6;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .link-menu {
+        width: auto;
     }
 
     .nav {
@@ -163,8 +244,8 @@
         display: none;
     }
 
- 
-   .contenedor {
+
+    .contenedor {
         grid-area: container;
         display: grid;
         grid-area: container;
@@ -172,11 +253,11 @@
         gap: 10px;
         flex-flow: column;
         overflow-y: auto;
-        height: calc(100vh);  
+        height: calc(100vh);
     }
 
-    .title-gallery{
-        display:none;
+    .title-gallery {
+        display: none;
     }
 
     .container-card {
@@ -196,6 +277,19 @@
         height: 300px;
     }
 
+    .about {
+        grid-area: about;
+        grid-column: 1 / 5;
+    }
+
+    .contacto {
+        grid-area: contacto;
+        grid-template-columns: repeat(6, auto);
+        display: grid;
+        grid-column: 1 / 5;
+    }
+
+
     .footer {
         grid-area: footer;
     }
@@ -211,6 +305,14 @@
 
 @media (min-width: 601px) and (max-width: 1280px) {
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .link-menu {
+        width: auto;
+    }
+
     .contenedor {
         display: grid;
         /* grid-area: container;
@@ -220,17 +322,32 @@
         flex-flow: column;
         align-items: center; 
         overflow-y: auto;*/
-        height: calc(100vh);  
+        height: calc(100vh);
     }
 
     .main-card {
         display: grid;
-        grid-template-columns: repeat(6, auto);
+        grid-template-columns: repeat(3, auto);
         gap: 2%;
         justify-content: center;
-
     }
 
+    .about {
+        justify-content: center;
+        display: grid;
+        grid-column: 2 / 4;
+    }
+
+    .contacto {
+        justify-content: center;
+        display: grid;
+        grid-column: 2 / auto;
+    }
+
+
+    .footer {
+        display: grid;
+    }
 
     .container-card {
         grid-area: container;
