@@ -1,6 +1,6 @@
 Proyecto Final - Modulo CSS Avanzado
 
-- la siguiente landign contempla:
+- la siguiente landing contempla:
     - Animaciones
     - Flexbox
     - Grid
